@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+    <header>
+        <img src="civil.jpg" alt="Logo" class="logo">
+       
+        <h1>Direito Civil</h1>
+        <p>O Direito Civil é o alicerce que protege seus bens, sua família e seus direitos na vida em sociedade.</p>
+    </header>
+
+    <a href="index.html" class="btn-voltar">
+        <span class="setinha">←</span>
+        Voltar
+    </a>
+
+    <section>
+        <h2>As Principais Áreas de Atuação Incluem:</h2>
+        <ul>
+            <li>Planejamento Sucessório: Elaboração de testamentos, doações e holdings familiares.</li>
+            <li>Divórcio e Dissolução de União Estável: Orientação sobre regime de bens e guarda dos filhos.</li>
+            <li>Guarda e Alimentos: Defesa dos direitos de crianças e adolescentes. </li>
+            <li>Inventário e Partilha de Bens: Condução de processos judiciais e extrajudiciais.</li>
+            <li>Em resumo, o Direito Civil resguarda os interesses patrimoniais e familiares, oferecendo segurança jurídica nas relações pessoais mais importantes.</li>
+
+        <h2>Dicas e informações sobre o curso</h2>
+        <ul>
+            <li>Guarda Compartilhada: O que mudou na lei e como isso afeta a rotina familiar.</li>
+            <li>Inventário Descomplicado: Evite erros e saiba como acelerar a partilha de bens.</li>
+            <li> Divórcio Consensual: O passo a passo para se divorciar de forma rápida e menos custosa.</li>
+            <li>Teste Seus Conhecimentos: Questões e e-books essenciais sobre a Lei de Alimentos.</li>
+        </ul>
+
+        <button onclick="mostrarDetalhes()">Saiba mais do curso</button>
+        <div class="detalhes" id="detalhes">
+        <p>Nosso curso é 100% gratuito. Domine a Teoria Geral, a aplicação do Código Civil e a argumentação jurídica em juízo. A formação combina aulas sobre Direito de Família, Sucessões e Processo Civil com a análise de inúmeras petições e casos emblemáticos do tema. As aulas são oferecidas em um formato flexível (online/presencial).</p>
+    </div>
+    </section>
+
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if(detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+            detalhes.style.display = "block";
+         }
+        }
+    </script>
+</body>
+</html>

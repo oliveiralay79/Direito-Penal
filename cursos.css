@@ -1,0 +1,99 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #000000;
+}
+header {
+    background: #56aeff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+section{
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #0b5ba6;
+}
+
+ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+button {
+    background: #56aeff;
+    color: white; /* Adicionado para garantir que o texto seja branco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    /* CORREÇÃO: Sintaxe correta para transição de 0.3 segundos */
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #f5f7fa;
+    color: #56aeff; /* Adicionado para manter o contraste no hover */
+}
+
+/* Detalhes (Sem alterações conforme solicitado) */
+.detalhes {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background:  #0781f4;
+    border-left: 5px solid #034fb2fe;
+    border-radius: 5px;
+}
+.logo {
+    height: 100px;
+    
+}
+
+/* ------------------------------------------- */
+/* --- REGRAS DE RESPONSIVIDADE (MEDIA QUERY) --- */
+/* ------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    button {
+        width: 100%; /* Botão em largura total para celular */
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    ul {
+        margin-left: 10px;
+    }
+}

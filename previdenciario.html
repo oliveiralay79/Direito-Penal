@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+    <header>
+        <img src="prev.jpg" alt="Logo" class="logo">
+
+        <h1>Direito Previdenciário</h1>
+        <p>O Direito Previdenciário é a garantia de um futuro seguro para o presente do trabalhador.</p>
+    </header>
+
+    <a href="index.html" class="btn-voltar">
+        <span class="setinha">←</span>
+        Voltar
+    </a>
+
+    <section>
+        <h2>As principais atividades realizadas nessa área incluem:</h2>
+        <ul>
+            <li>Consultoria e Planejamento </li>
+            <li>Pedido de Benefícios  </li>
+            <li> Revisão de Benefícios </li>
+            <li>Processos Judiciais</li>
+            <li>Em resumo, a área do Direito Previdenciário atua para garantir que os trabalhadores e seus dependentes tenham acesso aos seus direitos, oferecendo segurança e amparo financeiro em situações de vulnerabilidade, como doença, velhice e morte.</li>
+        </ul>
+
+        <h2>Dicas e informações sobre o curso</h2>
+        <ul>
+            <li>Aposentadoria Sem Mistério: O guia prático das novas regras e idades mínimas.</li>
+            <li>Benefício Negado? Saiba como recorrer ao INSS e garantir seus direitos.</li>
+            <li>Pensão por Morte: Quem tem direito e quais documentos são essenciais para o pedido.</li>
+            <li>Atualização Jurídica: Melhores livros e e-books sobre a Reforma da Previdência.</li>
+            <li>Ficou mais claro e focado para o público de Direito Previdenciário. O que você achou?</li>
+        </ul>
+
+        <button onclick="mostrarDetalhes()">Saiba mais do curso</button>
+        <div class="detalhes" id="detalhes">
+        <p>Nosso curso é 100% gratuito. Domine as regras da Reforma, o cálculo de benefícios e o processo administrativo do INSS. A formação combina aulas sobre Seguridade Social, Legislação e Jurisprudência com a análise e aplicação de inúmeros casos práticos do dia a dia. As aulas são oferecidas em um formato flexível (online/presencial).</p>
+    </div>
+    </section>
+
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if(detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+            detalhes.style.display = "block";
+         }
+        }
+    </script>
+</body>
+</html>

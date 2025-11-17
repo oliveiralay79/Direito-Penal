@@ -1,0 +1,222 @@
+/* ===============================
+    Estilo geral do cabeçalho
+=============================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #18117c;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    z-index: 100;
+}
+
+/* Container esquerdo (hamburguer + logo + menu) */
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+/* Ícones à direita */
+.container-direita img {
+    width: 28px;
+    height: auto;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.container-direita img:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+    Menu padrão
+=============================== */
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-menu li {
+    position: relative;
+}
+
+.lista-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover dos links */
+.lista-menu a:hover {
+    color: #111b8f;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+/* ===============================
+    Submenus (dropdowns)
+=============================== */
+.lista-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #310bed; /* tom mais escuro para diferenciar */
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    display: none; /* escondido por padrão */
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.lista-menu li:hover > ul {
+    display: block;
+}
+
+.lista-menu li ul li a {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.lista-menu li ul li a:hover {
+    background-color: #071ac9;
+    color: #000000; /* Texto preto para alto contraste no hover */
+}
+
+/* ===============================
+    Botão hamburguer
+=============================== */
+.menu-botao {
+    display: none;
+}
+
+.menu-icone {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===============================
+    Rodapé
+=============================== */
+.rodape {
+    background-color: #2f01a2;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.links-rodape {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-rodape a {
+    color: #eef8fb;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Adicionada transição suave */
+}
+
+.links-rodape a:hover {
+    color: #fff;
+}
+
+/* ===============================
+    Responsivo (até 768px)
+=============================== */
+@media (max-width: 768px) {
+    
+    /* CABEÇALHO */
+    .cabecalho {
+        /* Ajuste fino no padding para telas menores */
+        padding: 10px 15px; 
+    }
+
+    /* Menu é empilhado e estendido */
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Alinhar abaixo do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Fundo branco no mobile */
+        padding: 10px 0;
+        border-top: 1px solid #000000;
+    }
+
+    /* Links do menu mobile: CORREÇÃO DE COR */
+    .lista-menu a {
+        color: #18117c; /* Garante que o texto seja legível no fundo branco */
+        padding: 12px 20px; /* Aumenta a área de toque */
+    }
+
+    .lista-menu a:hover {
+        background-color: #f0f0f0; /* Hover suave no fundo branco */
+        color: #111b8f; 
+    }
+
+    /* Exibir menu quando o checkbox estiver marcado */
+    .menu-botao:checked + .menu-icone + .lista-menu { /* Ajustada a seletividade */
+        display: flex;
+    }
+    
+    /* Correção: Mantenha o ícone do menu-icone (hambúrguer) visível */
+    .menu-icone {
+        display: block;
+    }
+
+    /* Submenus no mobile */
+    .lista-menu li ul {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #324fe3;
+        display: none;
+    }
+
+    .lista-menu li:hover > ul {
+        display: block;
+    }
+
+    .lista-menu li ul li a {
+        padding-left: 30px; /* Indenta sublinks para melhor hierarquia */
+    }
+
+    /* RODAPÉ */
+    .links-rodape {
+        flex-direction: column; /* Links do rodapé empilhados */
+        gap: 10px;
+        margin: 15px 0 0;
+    }
+}

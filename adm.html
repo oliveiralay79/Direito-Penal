@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+    <header>
+        <img src="adm.jpg" alt="Logo" class="logo">
+
+        <h1>Direito Administrativo</h1>
+        <p>O Direito Administrativo é a chave para entender o funcionamento do Estado, as regras dos concursos e as relações com a Administração Pública</p>
+    </header>
+
+    <a href="index.html" class="btn-voltar">
+        <span class="setinha">←</span>
+        Voltar
+    </a>
+
+    <section>
+        <h2>As principais atividades realizadas nessa área incluem:</h2>
+        <ul>
+            <li>Licitações e Contratos: Regras para fornecimento de bens e serviços ao Poder Público. </li>
+            <li>Servidores Públicos: Orientações sobre posse, estágio probatório e PAD (Processo Administrativo Disciplinar).</li>
+            <li>Concursos Públicos: Entenda as normas de editais, recursos e anulação de questões. </li>
+            <li>Atos e Poderes da Administração: Análise detalhada dos limites da atuação estatal.</li>
+            <li>Em resumo, o Direito Administrativo regula a função administrativa do Estado, garantindo a legalidade, a moralidade e a eficiência na gestão dos recursos públicos.</li>
+        </ul>
+
+        <h2>Dicas e informações sobre o curso</h2>
+        <ul>
+            <li>Nova Lei de Licitações (Lei 14.133): As mudanças essenciais para quem atua na área.</li>
+            <li> Recursos em Concursos: Como formular argumentos jurídicos para anular questões ou mudar gabaritos.</li>
+            <li>Processo Administrativo Disciplinar (PAD): Os erros que servidores não podem cometer.</li>
+            <li> Material de Estudo: Indicações de doutrina e e-books focados em provas de alto nível.</li>
+            
+        </ul>
+
+        <button onclick="mostrarDetalhes()">Saiba mais do curso</button>
+        <div class="detalhes" id="detalhes">
+        <p>Nosso curso é 100% gratuito. Domine os Princípios Constitucionais, a Teoria da Licitação e o regime jurídico dos agentes públicos. A formação combina aulas sobre Atos Administrativos, Improbidade e Responsabilidade Civil com a análise de inúmeras jurisprudências e súmulas relevantes. As aulas são oferecidas em um formato flexível (online/presencial).</p>
+    </div>
+    </section>
+
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if(detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+            detalhes.style.display = "block";
+         }
+        }
+    </script>
+</body>
+</html>

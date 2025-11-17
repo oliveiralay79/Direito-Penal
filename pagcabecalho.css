@@ -1,0 +1,98 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #040994; /* Azul Escuro */
+}
+header {
+    background: #ffffff; /* Fundo Branco */
+    color: rgb(5, 2, 158); /* Texto Azul Escuro */
+    padding: 20px;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+section{
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #040994; /* Azul Escuro */
+}
+
+ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+button {
+    background: #413fcb; /* Azul Vibrante */
+    color: white; /* Adicionado para garantir o contraste */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    /* CORREÇÃO DA SINTAXE: O valor original '0,3s' foi corrigido para que a transição funcione */
+    transition: background 0.3s ease, color 0.3s ease; 
+}
+button:hover {
+    background: #f5f7fa; /* Fundo Claro no Hover */
+    color: #413fcb; /* Cor do texto no Hover para manter o contraste */
+}
+.detalhes {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #3b50c7;
+    border-left: 5px solid #4381f5;
+    border-radius: 5px;
+}
+/* Adicionado para manter a consistência com o código anterior, se a classe 'logo' fosse usada. */
+.logo { 
+    height: 100px;
+}
+
+/* ------------------------------------------- */
+/* --- REGRAS DE RESPONSIVIDADE (MEDIA QUERY) --- */
+/* ------------------------------------------- */
+/* Aplicado para telas menores que 600px (smartphones) */
+
+@media (max-width: 600px) {
+
+    /* Ajusta o padding do cabeçalho */
+    header {
+        padding: 15px 10px;
+    }
+
+    /* Diminui o tamanho das fontes para caberem melhor */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Reduz o padding da seção principal */
+    section {
+        padding: 20px 15px;
+    }
+
+    /* Faz o botão ocupar a largura total, melhorando a usabilidade móvel */
+    button {
+        width: 100%; 
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+}
